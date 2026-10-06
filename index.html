@@ -8,27 +8,28 @@
     * { box-sizing: border-box; }
     html, body { margin: 0; min-height: 100%; }
     body { font: 16px/1.4 system-ui, -apple-system, sans-serif; color: #17212b; background: #f3f5f7; }
-    header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1.5rem; padding: .8rem 1rem; background: white; border-bottom: 1px solid #dce1e6; }
-    h1 { font-size: 1.1rem; margin: 0; }
-    nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+    header { padding: .8rem 1rem; background: white; border-bottom: 1px solid #dce1e6; }
+    header strong { font-size: 1rem; }
+    main { max-width: 1000px; margin: 0 auto; padding: 2rem 1rem 3rem; text-align: center; }
+    h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin: 0 0 1.25rem; }
+    img { display: block; width: 100%; height: auto; background: white; border: 1px solid #dce1e6; box-shadow: 0 6px 24px #17212b16; }
+    .links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .8rem 1.5rem; margin-top: 1.5rem; }
     a { color: #0645ad; }
-    main { height: calc(100vh - 66px); min-height: 500px; }
-    iframe { display: block; width: 100%; height: 100%; border: 0; }
-    @media (max-width: 680px) { main { height: calc(100vh - 110px); } }
+    .primary { display: inline-block; padding: .75rem 1.2rem; border-radius: .4rem; background: #164f9e; color: white; font-weight: 600; text-decoration: none; }
+    .primary:hover { background: #0e3771; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Robust Market Interventions</h1>
-    <nav aria-label="Talk files">
-      <a href="talk.pdf">Open talk PDF</a>
-      <a href="full.pdf">PDF with backup slides</a>
-    </nav>
+    <strong>Robust Market Interventions</strong>
   </header>
   <main>
-    <iframe src="talk.pdf" title="Robust Market Interventions talk slides">
-      <p>Your browser cannot display the PDF here. <a href="talk.pdf">Open the talk PDF</a>.</p>
-    </iframe>
+    <h1>Talk slides</h1>
+    <a href="talk.pdf" aria-label="Open talk slides PDF"><img src="cover.png" alt="Title slide: Robust Market Interventions by Galeotti, Golub, Goyal, Talamàs, and Tamuz"></a>
+    <nav class="links" aria-label="Talk files">
+      <a class="primary" href="talk.pdf">Open talk PDF</a>
+      <a href="full.pdf">PDF with backup slides</a>
+    </nav>
   </main>
 </body>
 </html>
